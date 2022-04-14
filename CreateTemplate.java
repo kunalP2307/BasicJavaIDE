@@ -62,6 +62,7 @@ public class CreateTemplate {
         frame.setSize(300,600);
         frame.setLayout(null);
         frame.setVisible(true);
+        frame.setLocation(1100,110);
     }
 
     public void addLisnter(){
@@ -113,7 +114,7 @@ public class CreateTemplate {
                 "\n\n"+"}"+"\n";
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         Notepad n = new Notepad();
-        n.setText(classTemplate);
+        n.setText(classTemplate,className);
     }
 
     public void createInterface(String interfaceName){

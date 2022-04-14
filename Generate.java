@@ -11,9 +11,10 @@ public class Generate {
 
     public String text;
     public String file;
+    public String className;
+    public Generate(String className,String text,String file){
 
-    public Generate(String text,String file){
-
+        this.className = className;
         this.text = text;
         this.file = file;
 
@@ -26,11 +27,12 @@ public class Generate {
         panel.setBounds(10,10,280,380);
         frame.add(panel);
 
+        System.out.println("shfkj");
+        frame.setLocation(90,500);
         frame.setLayout(null);
         frame.setSize(300,400);
-        frame.setLocation(200,110);
         frame.setVisible(true);
-
+        frame.setLocation(660,110);
     }
     public void initButtons(){
 
@@ -56,10 +58,11 @@ public class Generate {
             GettersAndSetters gettersAndSetters = new GettersAndSetters(text,file);
         });
         buttons[3].addActionListener(e -> {
+            new Constructor(className,text,file);
 
         });
         buttons[4].addActionListener(e -> {
-
+            new ToString(className,text,file);
         });
         buttons[5].addActionListener(e -> {
 
@@ -68,6 +71,6 @@ public class Generate {
     }
 
     public static void main(String args[]){
-        Generate generate = new Generate(null,null);
+        Generate generate = new Generate(null,null,null);
     }
 }
